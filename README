@@ -13,7 +13,7 @@ of unfinished, orphaned or not even started open source pet-projects,
 for which I am sorry.
 
 It contains few UNIX commands written for ARM Linux in ARM assembly language.
-They were developed on an Intel StrongARM board but and there was a cross-building
+They were developed on an Intel StrongARM board and there was a cross-building
 attempt as well as you can see in the Makefiles. Feel free to update them for newer
 ARM Linux hardware if you have some, figure out step 2, then profit.
 
