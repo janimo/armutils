@@ -1,0 +1,23 @@
+BINDIR=/data/lart/cross/arm-linux/bin/
+
+CC=$(BINDIR)gcc
+//LD=$(BINDIR)ld
+LD = ld
+#STRIPFLAG=-s
+STRIPFLAG=
+DEBUGFLAG=-g
+COMPILEONLY = -c
+
+CFLAGS=$(COMPILEONLY) $(DEBUGFLAG) $(STRIPFLAG) -nostdlib -nostartfiles -I../include
+
+OBJECTS =  head httpd ping sync tail
+
+all:	$(OBJECTS)
+%	:%.S
+
+	$(CC) $(CFLAGS) -o $@.o $<
+	$(LD) -oformat binary -o $@ $@.o
+#	$(STRIP) $@
+
+clean:
+	rm -f $(OBJECTS)
