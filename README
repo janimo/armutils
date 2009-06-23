@@ -1,0 +1,21 @@
+--------------------------------------------------------------
+ARMUtils - some Unix commands written in ARM assembly language
+--------------------------------------------------------------
+
+Old code inspired by http://asm.sourceforge.net/asmutils.html
+dug out of backups and finally published 8 years after registering
+the sf.net armutils project.
+
+This was my small contribution to the geographically distributed,
+loosely coordinated, selfless and unintentional community effort
+of clueless hacker-wannabes towards making SF a central repository
+of unfinished, orphaned or not even started open source pet-projects,
+for which I am sorry.
+
+It contains few UNIX commands written for ARM Linux in ARM assembly language.
+They were developed on an Intel StrongARM board so there's no cross-building
+involved as you can see in the Makefiles. Feel free to update them for newer
+ARM Linux hardware if you have some, figure out step 2, then profit.
+
+Do not mail me for support though, I have mostly forgotten this and haven't
+worked with ARM for years.
