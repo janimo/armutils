@@ -1,7 +1,7 @@
 /*
  *	System call numbers and syscall macros
  *	
- *	$Id: syscall.inc,v 1.4 2001-06-11 23:40:56 jani Exp $
+ *	$Id: syscall.inc,v 1.4 2001/06/11 23:40:56 jani Exp $
  */
 
 /* asm/unistd.h */
@@ -252,7 +252,8 @@
 #define SYS_SENDMSG	16	/* sys_sendmsg(2)       */
 #define SYS_RECVMSG	17	/* sys_recvmsg(2)       */
 
-#define syscall(no)	swi	__NR_##no
+#define cc_syscall(cc,no) 	swi##cc __NR_##no
+#define syscall(no)		swi	__NR_##no
 
 #define sys_exit	syscall(exit)
 #define sys_open	syscall(open)
@@ -261,6 +262,7 @@
 #define sys_fork	syscall(fork)		
 #define sys_close	syscall(close)
 #define sys_select	syscall(_newselect)
+#define sys_kill	syscall(kill)
 
 #define sys_socket	mov	r0,#SYS_SOCKET;syscall(socketcall)
 #define sys_listen	mov	r0,#SYS_LISTEN;syscall(socketcall)
