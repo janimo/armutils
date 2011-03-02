@@ -10,7 +10,7 @@ all:	$(OBJECTS) links
 
 %	:%.S
 
-	$(CC) -nostdlib -Wl,-oformat,binary  -I../include $< -o $@ 
+	$(CC) -nostdlib -Wl,--oformat,binary  -I../include $< -o $@ 
 	../tools/trunc $@
 	
 clean:
